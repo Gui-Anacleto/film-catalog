@@ -1,14 +1,21 @@
 import Content from '../models/contentModel.js'
 
-// GET /api/contents
 export const getAllContent = async (req, res) => {
-  const items = await Content.find()
-  res.json(items)
+  try {
+    const items = await Content.find()
+    res.json(items)
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar conteúdos', error: error.message })
+  }
 }
 
-// POST /api/contents
 export const addContent = async (req, res) => {
-  const newContent = new Content(req.body)
-  const saved = await newContent.save()
-  res.status(201).json(saved)
+  try {
+    const newContent = new Content(req.body)
+    const saved = await newContent.save()
+    res.status(201).json(saved)
+  } catch (error) {
+    res.status(400).json({ message: 'Erro ao adicionar conteúdo', error: error.message })
+  }
 }
+

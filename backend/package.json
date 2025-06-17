@@ -14,7 +14,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "dev": "nodemon src/server.js",
     "start": "node server.js"
   },
@@ -29,5 +29,10 @@
   "bugs": {
     "url": "https://github.com/Gui-Anacleto/film-catalog/issues"
   },
-  "homepage": "https://github.com/Gui-Anacleto/film-catalog#readme"
+  "homepage": "https://github.com/Gui-Anacleto/film-catalog#readme",
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.1.1"
+  }
 }
