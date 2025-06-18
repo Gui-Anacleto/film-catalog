@@ -12,7 +12,7 @@ Projeto de portfólio Full Stack com foco em backend Node.js e frontend em React
 
 ---
 
-## 🤪 Tecnologias Utilizadas
+## :computer: Tecnologias Utilizadas
 
 ### Backend
 
@@ -40,7 +40,8 @@ film-catalog/
 │   │   ├── models/
 │   │   ├── routes/
 │   │   ├── config/
-│   │   └── tests/
+|   |   ├── tests/
+│   │   └── app.js   
 │   ├── server.js
 │   └── .env
 └── frontend/ (em breve)
@@ -95,7 +96,7 @@ film-catalog/
 
 ---
 
-## 🤪 Rodando os Testes
+## :clipboard: Rodando os Testes
 
 ```bash
 npm test
