@@ -1,12 +1,13 @@
-import express from 'express'
-import cors from 'cors'
-import contentRoutes from './routes/contentRoutes.js'
+import express from 'express';
+import movieRoutes from './routes/movieRoutes.js';
 
-const app = express()
+const app = express();
 
-app.use(cors())
-app.use(express.json())
+app.use(express.json());
 
-app.use('/api/contents', contentRoutes)
+// Rotas
+app.use('/api/movies', movieRoutes);
 
-export default app
+export default app;
+
+
